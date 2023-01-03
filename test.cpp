@@ -40,6 +40,9 @@ int main(int argc, char *argv[])
 
   a.parse_check(argc, argv);
 
+  int ret = a.get<int>("port");
+  cout << ret << endl;
+
   cout << a.get<string>("type") << "://"
        << a.get<string>("host") << ":"
        << a.get<int>("port") << endl;
